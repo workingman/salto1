@@ -1,0 +1,13 @@
+salesforce.Queue hotleads {
+  fullName = "hotleads"
+  doesSendEmailToMembers = false
+  name = "hotleads"
+  queueMembers = {
+    users = {
+      user = "geoff@dgbi.ca"
+    }
+  }
+  queueSobject = {
+    sobjectType = "Lead"
+  }
+}
