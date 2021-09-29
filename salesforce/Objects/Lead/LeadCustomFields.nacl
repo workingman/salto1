@@ -86,4 +86,19 @@ type salesforce.Lead {
     externalId = false
     trackFeedHistory = false
   }
+  salesforce.Number LeadScore__c {
+    apiName = "Lead.LeadScore__c"
+    label = "LeadScore"
+    defaultValueFormula = "0.50"
+    precision = 3
+    scale = 2
+    inlineHelpText = "between 0 and 1"
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+    description = "relative probability of conversion from 0 to 1"
+    externalId = false
+    trackFeedHistory = false
+  }
 }
