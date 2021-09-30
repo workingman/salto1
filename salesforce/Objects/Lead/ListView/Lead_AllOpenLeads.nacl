@@ -12,4 +12,11 @@ salesforce.ListView Lead_AllOpenLeads {
   _parent = [
     salesforce.Lead,
   ]
+  columns = [
+    "FULL_NAME",
+    "LeadScore__c",
+    "LEAD.CREATED_DATE",
+    "CORE.USERS.ALIAS",
+    "LEAD.UNREAD",
+  ]
 }
