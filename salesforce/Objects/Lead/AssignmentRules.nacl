@@ -1,28 +1,28 @@
 salesforce.AssignmentRules Lead {
   assignmentRule = [
     {
-      fullName = "Standard"
+      fullName = "lead score assign"
       active = true
       ruleEntry = [
         {
-          assignedTo = "geoff@dgbi.ca"
-          assignedToType = "User"
+          assignedTo = "hotleads"
+          assignedToType = "Queue"
           criteriaItems = [
             {
-              field = "Lead.Country"
-              operation = "equals"
-              value = "US,USA,United States,United States of America"
+              field = salesforce.Lead.field.LeadScore__c
+              operation = "greaterOrEqual"
+              value = "0.5"
             },
           ]
         },
         {
-          assignedTo = "geoff@dgbi.ca"
-          assignedToType = "User"
+          assignedTo = "coldleads"
+          assignedToType = "Queue"
           criteriaItems = [
             {
-              field = "Lead.Country"
-              operation = "notEqual"
-              value = "US,USA,United States,United States of America"
+              field = salesforce.Lead.field.LeadScore__c
+              operation = "lessThan"
+              value = "0.5"
             },
           ]
         },
